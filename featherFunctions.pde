@@ -1,6 +1,4 @@
-public void brownFeather(){
-  float h = random(150, 250);
-  float w = random(50, 100);
+ void brownFeather(float h, float w) {
   push();
   float x = random(1, 700);
   float y = random(10, 300);
@@ -28,8 +26,8 @@ public void brownFeather(){
 
 
 
-public void stripedFeather(float h, float w){
-  
+ void stripedFeather(float h, float w) {
+
   push();
   float x = random(1, 700);
   float y = random(10, 300);
@@ -44,7 +42,6 @@ public void stripedFeather(float h, float w){
   strokeWeight(4);
   line(-h/2, 0, h/2 + 100, 0);
   pop();
-
 }
 
 public void stripes(float w) {
@@ -52,9 +49,9 @@ public void stripes(float w) {
   stroke(64, 44, 28);
   noFill();
   float legLength = w;
-  float angle = radians(45); 
-  
-  for (int i = 0; i < 3; i++){
+  float angle = radians(45);
+
+  for (int i = 0; i < 3; i++) {
     pushMatrix();
     float shift = w/2 * i;
     translate (shift, 0);
@@ -65,12 +62,10 @@ public void stripes(float w) {
     line(0, 0, 0, -legLength / 2);
     popMatrix();
   }
-  
 }
 
 public void paperBackground() {
   fill (240, 227, 204);
   noStroke();
-  rect(35,25, 675, 300, 20);
-
+  rect(35, 25, 675, 300, 20);
 }
