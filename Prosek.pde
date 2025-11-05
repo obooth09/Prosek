@@ -9,6 +9,6 @@ void setup() {
 
 public void multiple() {
   for (int i = 1; i <=3; i++){
-    feather();
+    stripedFeather();
   }
 }
