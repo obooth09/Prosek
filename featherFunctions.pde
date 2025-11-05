@@ -28,9 +28,8 @@ public void brownFeather(){
 
 
 
-public void stripedFeather(){
-  float h = random(150, 250);
-  float w = random(50, 100);
+public void stripedFeather(float h, float w){
+  
   push();
   float x = random(1, 700);
   float y = random(10, 300);
