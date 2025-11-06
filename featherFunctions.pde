@@ -42,7 +42,13 @@ void stripes(float w) {
 void basicFeather(float r, float g, float b, float h, float w) {
   push();
   float x = random(1, 700);
+   if (x > 650 || x < 50) {
+     System.out.println(w);
+     w = (0.5 * w);
+     System.out.println(w);
+   }
   float y = random(10, 300);
+
   translate(x, y);
   rotate(radians(35));
   noStroke();
