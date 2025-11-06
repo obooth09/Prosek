@@ -44,11 +44,6 @@ void stripes(float w) {
 void basicFeather(float r, float g, float b, float h, float w) {
   push();
   float x = random(1, 700);
-   if (x > 650 || x < 50) {
-     System.out.println(w);
-     w = (0.5 * w);
-     System.out.println(w);
-   }
   float y = random(10, 300);
 
   translate(x, y);
@@ -56,6 +51,8 @@ void basicFeather(float r, float g, float b, float h, float w) {
   noStroke();
   fill(r, g, b);
   ellipse(0, 0, h, w);
+  fill(r, g, b, 90); 
+  ellipse(6, 8, h, w);
 }
 
 void featherRachis(float h) {
