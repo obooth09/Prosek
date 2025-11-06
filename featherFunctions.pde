@@ -25,10 +25,10 @@ void stripes(float w) {
   noFill();
   float legLength = w;
   float angle = radians(45);
-
+//make three "v" shaped stripes
   for (int i = 0; i < 3; i++) {
     pushMatrix();
-    float shift = w/2 * i;
+    float shift = (w/2) * i;
     translate (shift, 0);
     rotate(-HALF_PI);
     rotate(-angle);
@@ -37,6 +37,8 @@ void stripes(float w) {
     line(0, 0, 0, -legLength / 2);
     popMatrix();
   }
+  //one more stripe
+  singleStripe(w, legLength, angle);
 }
 
 void basicFeather(float r, float g, float b, float h, float w) {
@@ -67,4 +69,16 @@ void paperBackground() {
   fill (240, 227, 204);
   noStroke();
   rect(35, 25, 675, 300, 20);
+}
+
+void singleStripe(float w, float legLength, float angle){
+  pushMatrix();
+    float shift = -(w/2);
+    translate (shift, 0);
+    rotate(-HALF_PI);
+    rotate(-angle);
+    line(0, 0, 0, -legLength / 2 + legLength / 4);
+    rotate(angle * 2);
+    line(0, 0, 0, -legLength / 2 + legLength / 4);
+    popMatrix();
 }
