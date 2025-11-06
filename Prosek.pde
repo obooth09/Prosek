@@ -13,13 +13,13 @@ public void multiple() {
     int pick = (int) random(1, 4);
     System.out.println(pick);
     if (pick == 1) {
-      brownFeather(random(150, 250),random(50, 100));
+      brownFeather(random(150, 250), random(50, 100));
     } else if (pick == 2) {
       stripedFeather(random(150, 250), random(50, 100));
     } else if (pick == 3) {
       stripedFeather(random(150, 250) / 2, random(50, 100) / 2);
     } else {
-      brownFeather(random(150, 250) / 2,random(50, 100) / 2);
+      brownFeather(random(150, 250) / 2, random(50, 100) / 2);
+    }
   }
-}
 }
